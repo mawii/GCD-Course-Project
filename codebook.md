@@ -44,41 +44,79 @@ Subject.ID
         
       
 TimeDomain.BodyAccelerometer.mean.X
-        Normalized mean body motion component acceleration in the x-direction
+        Normalized mean body motion component acceleration in the x-direction (from accelerometer)
             Integer values bounded within [-1, 1]
 
 TimeDomain.BodyAccelerometer.mean.Y
-        Normalized mean body motion component acceleration in the y-direction
+        Normalized mean body motion component acceleration in the y-direction (from accelerometer)
             Integer values bounded within [-1, 1]
         
 TimeDomain.BodyAccelerometer.mean.Z
-        Normalized mean body motion component acceleration in the z-direction
+        Normalized mean body motion component acceleration in the z-direction (from accelerometer)
             Integer values bounded within [-1, 1]      
             
 TimeDomain.BodyAccelerometer.std.X
-        Normalized standard deviation body motion component acceleration in the x-direction
+        Normalized standard deviation body motion component acceleration in the x-direction (from accelerometer)
             Integer values bounded within [-1, 1]
 
 TimeDomain.BodyAccelerometer.std.Y
-        Normalized standard deviation body motion component acceleration in the y-direction
+        Normalized standard deviation body motion component acceleration in the y-direction (from accelerometer)
             Integer values bounded within [-1, 1]
         
 TimeDomain.BodyAccelerometer.std.Z
-        Normalized standard deviation body motion component acceleration in the z-direction
+        Normalized standard deviation body motion component acceleration in the z-direction (from accelerometer)
+            Integer values bounded within [-1, 1]   
+            
+TimeDomain.GravityAccelerometer.mean.X
+        Normalized mean gravitational motion component acceleration in the x-direction (from accelerometer)
+            Integer values bounded within [-1, 1]
+
+TimeDomain.GravityAccelerometer.mean.Y
+        Normalized mean gravitational motion component acceleration in the y-direction (from accelerometer)
+            Integer values bounded within [-1, 1]
+        
+TimeDomain.GravityAccelerometer.mean.Z
+        Normalized mean gravitational motion component acceleration in the z-direction (from accelerometer)
+            Integer values bounded within [-1, 1]      
+            
+TimeDomain.GravityAccelerometer.std.X
+        Normalized standard deviation gravitational motion component acceleration in the x-direction (from accelerometer)
+            Integer values bounded within [-1, 1]
+
+TimeDomain.GravityAccelerometer.std.Y
+        Normalized standard deviation gravitational motion component acceleration in the y-direction (from accelerometer)
+            Integer values bounded within [-1, 1]
+        
+TimeDomain.GravityAccelerometer.std.Z
+        Normalized standard deviation gravitational motion component acceleration in the z-direction (from accelerometer)
+            Integer values bounded within [-1, 1]    
+            
+TimeDomain.BodyAccelerometerJerk.mean.X
+        Normalized mean body motion component jerk in the x-direction (from accelerometer)
+            Integer values bounded within [-1, 1]
+
+TimeDomain.BodyAccelerometerJerk.mean.Y
+        Normalized mean body motion component jerk in the y-direction (from accelerometer)
+            Integer values bounded within [-1, 1]
+        
+TimeDomain.BodyAccelerometerJerk.mean.Z
+        Normalized mean body motion component jerk in the z-direction (from accelerometer)
+            Integer values bounded within [-1, 1]      
+            
+TimeDomain.BodyAccelerometerJerk.std.X
+        Normalized standard deviation body motion component jerk in the x-direction (from accelerometer)
+            Integer values bounded within [-1, 1]
+
+TimeDomain.BodyAccelerometerJerk.std.Y
+        Normalized standard deviation body motion component jerk in the y-direction (from accelerometer)
+            Integer values bounded within [-1, 1]
+        
+TimeDomain.BodyAccelerometerJerk.std.Z
+        Normalized standard deviation body motion component jerk in the z-direction (from accelerometer)
             Integer values bounded within [-1, 1]             
-                                      
- [9] "TimeDomain.GravityAccelerometer.mean.X"                
-[10] "TimeDomain.GravityAccelerometer.mean.Y"                
-[11] "TimeDomain.GravityAccelerometer.mean.Z"                
-[12] "TimeDomain.GravityAccelerometer.std.X"                 
-[13] "TimeDomain.GravityAccelerometer.std.Y"                 
-[14] "TimeDomain.GravityAccelerometer.std.Z"                 
-[15] "TimeDomain.BodyAccelerometerJerk.mean.X"               
-[16] "TimeDomain.BodyAccelerometerJerk.mean.Y"               
-[17] "TimeDomain.BodyAccelerometerJerk.mean.Z"               
-[18] "TimeDomain.BodyAccelerometerJerk.std.X"                
-[19] "TimeDomain.BodyAccelerometerJerk.std.Y"                
-[20] "TimeDomain.BodyAccelerometerJerk.std.Z"                
+                                                      
+
+
 [21] "TimeDomain.BodyGyroscope.mean.X"                       
 [22] "TimeDomain.BodyGyroscope.mean.Y"                       
 [23] "TimeDomain.BodyGyroscope.mean.Z"                       
