@@ -23,3 +23,7 @@ data <- read.table(file_path, header = TRUE) # reads the data in as a data.frame
 View(data) # view the summarized, tidy data as a spreadsheet
 ```
 
+### Understanding the Data
+codebook.md contains a detailed description of the 88 variables. The variable names in the tidy dataset themselves are already more descriptive than the original, for better comprehension.
+
+Variables are either in the time domain or the frequency domain. Variables prefixed with "TimeDomain" exist in the time domain. If they are prefixed with "FreqDomain," the column data consists of values resultant from a Fast Fourier Transform, so the values reside in the frequency domain. Variable names containing "BodyAccelerometer" depict the body motion component of triaxial acceleration from the accelerometer while variable names containing "BodyAccelerometer" depict the gravitational motion component of triaxial acceleration from the accelerometer. On the other hand, variable names that begin with "angle" depict triaxial angular velocity from the gyroscope.
