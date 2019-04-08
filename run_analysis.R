@@ -1,36 +1,32 @@
 library(dplyr)
 
-## Create file directory if it doesn't already exist
-if(!file.exists("./dataset")) {dir.create("./dataset")}
-
-
 ## Download project zip folder as a tempfile, unzip to
 ## a folder named dataset, and unlink connection
 temp <- tempfile() # opens connection with temp file
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 download.file(fileUrl, destfile = temp)
 dateDownloaded <- Sys.Date()
-i <- unzip(temp, list = T, exdir = "./dataset") # saves extracted file info
+i <- unzip(temp, list = T) # saves extracted file info
 fileNames <- i[, 1] # project file names
 extractDates <- i[, 2] # extract dates and times
-unzip(temp, exdir = "./dataset") # unzips zip folder to dataset folder
+unzip(temp, list = T) # unzips zip folder
 unlink(temp) # closes connection with temp file
 
 
 ## Read in test and train datasets, activity labels, and subject IDs
-test_set <- read.table("./dataset/UCI HAR Dataset/test/X_test.txt")
-train_set <- read.table("./dataset/UCI HAR Dataset/train/X_train.txt")
+test_set <- read.table("./test/X_test.txt")
+train_set <- read.table("./train/X_train.txt")
 
-activity_labels <- read.table("./dataset/UCI HAR Dataset/activity_labels.txt")[, 2]
-activities_test <- read.table("./dataset/UCI HAR Dataset/test/y_test.txt")[, 1]
-activities_train <- read.table("./dataset/UCI HAR Dataset/train/y_train.txt")[, 1]
+activity_labels <- read.table("activity_labels.txt")[, 2]
+activities_test <- read.table("./test/y_test.txt")[, 1]
+activities_train <- read.table("./train/y_train.txt")[, 1]
 
-subject_id_test <- read.table("./dataset/UCI HAR Dataset/test/subject_test.txt")[, 1]
-subject_id_train <- read.table("./dataset/UCI HAR Dataset/train/subject_train.txt")[, 1]
+subject_id_test <- read.table("./test/subject_test.txt")[, 1]
+subject_id_train <- read.table("./train/subject_train.txt")[, 1]
 
 ## Read in column names, and rename them so all invalid characters
 ## are translated to "."
-bad_names <- read.table("./dataset/UCI HAR Dataset/features.txt")[, 2]
+bad_names <- read.table("features.txt")[, 2]
 good_names <- make.names(bad_names, unique = T, allow_ = T) %>%
 			gsub("\\.+$", "", .) %>% gsub("[\\.]+", "\\.", .)
 names(test_set) <- good_names; names(train_set) <- good_names
