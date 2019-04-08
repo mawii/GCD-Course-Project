@@ -165,43 +165,43 @@ TimeDomain.BodyGyroscopeJerk.std.Z
             Integer values bounded within [-1, 1]     
             
 TimeDomain.BodyAccelerometerMagnitude.mean
-        Normalized mean body motion component of Euclidean-norm (from accelerometer)
+        Normalized mean Euclidean-norm of body acceleration (from accelerometer)
             Integer values bounded within [-1, 1]            
             
 TimeDomain.BodyAccelerometerMagnitude.std
-        Normalized standard deviation body motion component of Euclidean-norm (from accelerometer)
+        Normalized standard deviation of Euclidean-norm of body acceleration (from accelerometer)
             Integer values bounded within [-1, 1]     
             
 TimeDomain.GravityAccelerometerMagnitude.mean
-        Normalized mean gravitational motion component of Euclidean-norm (from accelerometer)
+        Normalized mean Euclidean-norm of gravitational acceleration (from accelerometer)
             Integer values bounded within [-1, 1]            
             
 TimeDomain.GravityAccelerometerMagnitude.std
-        Normalized standard deviation gravitational motion component of Euclidean-norm (from accelerometer)
+        Normalized standard deviation of Euclidean-norm of gravitational acceleration (from accelerometer)
             Integer values bounded within [-1, 1]              
             
 TimeDomain.BodyAccelerometerJerkMagnitude.mean
-        Normalized mean body motion component of Euclidean-norm of jerk (from accelerometer)
+        Normalized mean Euclidean-norm of body jerk (from accelerometer)
             Integer values bounded within [-1, 1]            
             
 TimeDomain.BodyAccelerometerJerkMagnitude.std
-        Normalized standard deviation body motion component of Euclidean-norm of jerk (from accelerometer)
+        Normalized standard deviation of Euclidean-norm of body jerk (from accelerometer)
             Integer values bounded within [-1, 1]               
          
 TimeDomain.BodyGyroscopeMagnitude.mean
-        Normalized mean body motion component of Euclidean-norm (from gyroscope)
+        Normalized mean Euclidean-norm of body acceleration (from gyroscope)
             Integer values bounded within [-1, 1]            
             
 TimeDomain.BodyGyroscopeMagnitude.std
-        Normalized standard deviation gravitational motion component of Euclidean-norm (from gyroscope)
+        Normalized standard deviation of Euclidean-norm of body acceleration (from gyroscope)
             Integer values bounded within [-1, 1]              
             
 TimeDomain.BodyGyroscopeJerkMagnitude.mean
-        Normalized mean body motion component of Euclidean-norm of jerk (from gyroscope)
+        Normalized mean Euclidean-norm of body jerk (from gyroscope)
             Integer values bounded within [-1, 1]            
             
 TimeDomain.BodyGyroscopeJerkMagnitude.std
-        Normalized standard deviation body motion component of Euclidean-norm of jerk (from gyroscope)
+        Normalized standard deviation of Euclidean-norm of body jerk (from gyroscope)
             Integer values bounded within [-1, 1]          
         
 FreqDomain.BodyAccelerometer.mean.X
@@ -228,28 +228,16 @@ FreqDomain.BodyAccelerometer.std.Z
         Normalized standard deviation body motion component acceleration in the z-direction (from accelerometer, FFT)
             Integer values bounded within [-1, 1]   
             
-FreqDomain.GravityAccelerometer.mean.X
-        Normalized mean gravitational motion component acceleration in the x-direction (from accelerometer, FFT)
+FreqDomain.BodyAccelerometer.meanFreq.X
+        Normalized mean body acceleration with mean frequency in the x-direction (from accelerometer, FFT)
             Integer values bounded within [-1, 1]
 
-FreqDomain.GravityAccelerometer.mean.Y
-        Normalized mean gravitational motion component acceleration in the y-direction (from accelerometer, FFT)
+FreqDomain.BodyAccelerometer.meanFreq.Y
+        Normalized mean body acceleration with mean frequency in the y-direction (from accelerometer, FFT)
             Integer values bounded within [-1, 1]
         
-FreqDomain.GravityAccelerometer.mean.Z
-        Normalized mean gravitational motion component acceleration in the z-direction (from accelerometer, FFT)
-            Integer values bounded within [-1, 1]      
-            
-FreqDomain.GravityAccelerometer.std.X
-        Normalized standard deviation gravitational motion component acceleration in the x-direction (from accelerometer, FFT)
-            Integer values bounded within [-1, 1]
-
-FreqDomain.GravityAccelerometer.std.Y
-        Normalized standard deviation gravitational motion component acceleration in the y-direction (from accelerometer, FFT)
-            Integer values bounded within [-1, 1]
-        
-FreqDomain.GravityAccelerometer.std.Z
-        Normalized standard deviation gravitational motion component acceleration in the z-direction (from accelerometer, FFT)
+FreqDomain.BodyAccelerometer.meanFreq.Z
+        Normalized mean body acceleration with mean frequency in the z-direction (from accelerometer, FFT)
             Integer values bounded within [-1, 1]    
             
 FreqDomain.BodyAccelerometerJerk.mean.X
@@ -274,7 +262,19 @@ FreqDomain.BodyAccelerometerJerk.std.Y
         
 FreqDomain.BodyAccelerometerJerk.std.Z
         Normalized standard deviation body motion component jerk in the z-direction (from accelerometer, FFT)
-            Integer values bounded within [-1, 1]             
+            Integer values bounded within [-1, 1]    
+            
+FreqDomain.BodyAccelerometerJerk.meanFreq.X
+        Normalized mean body jerk with mean frequency in the x-direction (from accelerometer, FFT)
+            Integer values bounded within [-1, 1]
+
+FreqDomain.BodyAccelerometerJerk.meanFreq.Y
+        Normalized mean body jerk with mean frequency in the y-direction (from accelerometer, FFT)
+            Integer values bounded within [-1, 1]
+        
+FreqDomain.BodyAccelerometerJerk.meanFreq.Z
+        Normalized mean body jerk with mean frequency in the z-direction (from accelerometer, FFT)
+            Integer values bounded within [-1, 1]            
                                                       
 FreqDomain.BodyGyroscope.mean.X
         Normalized mean body motion component acceleration in the x-direction (from gyroscope, FFT)
@@ -300,77 +300,91 @@ FreqDomain.BodyGyroscope.std.Z
         Normalized standard deviation body motion component acceleration in the z-direction (from gyroscope, FFT)
             Integer values bounded within [-1, 1] 
 
-FreqDomain.BodyGyroscopeJerk.mean.X
-        Normalized mean body motion component jerk in the x-direction (from gyroscope, FFT)
+FreqDomain.BodyGyroscope.meanFreq.X
+        Normalized mean body acceleration with mean frequency in the x-direction (from gyroscope, FFT)
             Integer values bounded within [-1, 1]
 
-FreqDomain.BodyGyroscope.mean.Y
-        Normalized mean body motion component jerk in the y-direction (from gyroscope, FFT)
+FreqDomain.BodyGyroscope.meanFreq.Y
+        Normalized mean body acceleration with mean frequency in the y-direction (from gyroscope, FFT)
             Integer values bounded within [-1, 1]
         
-FreqDomain.BodyGyroscopeJerk.mean.Z
-        Normalized mean body motion component jerk in the z-direction (from gyroscope, FFT)
-            Integer values bounded within [-1, 1]      
-            
-FreqDomain.BodyGyroscopeJerk.std.X
-        Normalized standard deviation body motion component jerk in the x-direction (from gyroscope, FFT)
-            Integer values bounded within [-1, 1]
-
-FreqDomain.BodyGyroscopeJerk.std.Y
-        Normalized standard deviation body motion component jerk in the y-direction (from gyroscope, FFT)
-            Integer values bounded within [-1, 1]
-        
-FreqDomain.BodyGyroscopeJerk.std.Z
-        Normalized standard deviation body motion component jerk in the z-direction (from gyroscope, FFT)
-            Integer values bounded within [-1, 1]     
+FreqDomain.BodyGyroscope.meanFreq.Z
+        Normalized mean body acceleration with mean frequency in the z-direction (from gyroscope, FFT)
+            Integer values bounded within [-1, 1]                
             
 FreqDomain.BodyAccelerometerMagnitude.mean
-        Normalized mean body motion component of Euclidean-norm (from accelerometer, FFT)
+        Normalized mean Euclidean-norm of body acceleration (from accelerometer, FFT)
             Integer values bounded within [-1, 1]            
             
 FreqDomain.BodyAccelerometerMagnitude.std
-        Normalized standard deviation body motion component of Euclidean-norm (from accelerometer, FFT)
+        Normalized standard deviation Euclidean-norm of body acceleration (from accelerometer, FFT)
             Integer values bounded within [-1, 1]     
             
-FreqDomain.GravityAccelerometerMagnitude.mean
-        Normalized mean gravitational motion component of Euclidean-norm (from accelerometer, FFT)
+FreqDomain.BodyAccelerometerMagnitude.meanFreq
+        Normalized mean Euclidean-norm of body acceleration with mean frequency (from accelerometer, FFT)
+            Integer values bounded within [-1, 1]                                    
+            
+FreqDomain.BodyBodyAccelerometerJerkMagnitude.mean
+        Normalized mean Euclidean-norm of body jerk (from accelerometer, FFT)
             Integer values bounded within [-1, 1]            
             
-FreqDomain.GravityAccelerometerMagnitude.std
-        Normalized standard deviation gravitational motion component of Euclidean-norm (from accelerometer, FFT)
-            Integer values bounded within [-1, 1]              
-            
-FreqDomain.BodyAccelerometerJerkMagnitude.mean
-        Normalized mean body motion component of Euclidean-norm of jerk (from accelerometer, FFT)
-            Integer values bounded within [-1, 1]            
-            
-FreqDomain.BodyAccelerometerJerkMagnitude.std
-        Normalized standard deviation body motion component of Euclidean-norm of jerk (from accelerometer, FFT)
+FreqDomain.BodyBodyAccelerometerJerkMagnitude.std
+        Normalized standard deviation Euclidean-norm of body jerk (from accelerometer, FFT)
             Integer values bounded within [-1, 1]               
          
-FreqDomain.BodyGyroscopeMagnitude.mean
-        Normalized mean body motion component of Euclidean-norm (from gyroscope, FFT)
-            Integer values bounded within [-1, 1]            
+FreqDomain.BodyBodyAccelerometerJerkMagnitude.meanFreq
+        Normalized mean Euclidean-norm of body jerk with mean frequency (from accelerometer, FFT)
+            Integer values bounded within [-1, 1]           
             
-FreqDomain.BodyGyroscopeMagnitude.std
-        Normalized standard deviation gravitational motion component of Euclidean-norm (from gyroscope, FFT)
-            Integer values bounded within [-1, 1]              
-            
-FreqDomain.BodyGyroscopeJerkMagnitude.mean
-        Normalized mean body motion component of Euclidean-norm of jerk (from gyroscope, FFT)
-            Integer values bounded within [-1, 1]            
-            
-FreqDomain.BodyGyroscopeJerkMagnitude.std
-        Normalized standard deviation body motion component of Euclidean-norm of jerk (from gyroscope, FFT)
+FreqDomain.BodyBodyGyroscopeMagnitude.mean
+        Normalized mean Euclidean-norm of body acceleration (from gyroscope, FFT)
             Integer values bounded within [-1, 1]
 
+FreqDomain.BodyBodyGyroscopeMagnitude.std
+        Normalized standard deviation Euclidean-norm of body acceleration (from gyroscope, FFT)
+            Integer values bounded within [-1, 1]              
+            
+FreqDomain.BodyBodyGyroscopeMagnitude.meanFreq
+        Normalized mean Euclidean-norm of body acceleration with mean frequency (from gyroscope, FFT)
+            Integer values bounded within [-1, 1]            
+            
+FreqDomain.BodyBodyGyroscopeJerkMagnitude.mean
+        Normalized mean Euclidean-norm of body jerk (from gyroscope, FFT)
+            Integer values bounded within [-1, 1]
+
+FreqDomain.BodyBodyGyroscopeJerkMagnitude.std
+        Normalized standard deviation Euclidean-norm of body jerk (from gyroscope, FFT)
+            Integer values bounded within [-1, 1]              
+            
+FreqDomain.BodyBodyGyroscopeJerkMagnitude.meanFreq
+        Normalized mean Euclidean-norm of body jerk with mean frequency (from gyroscope, FFT)
+            Integer values bounded within [-1, 1] 
     
 angle.TimeDomain.BodyAccelerometerMean.gravity
-        Angular velocity
-[83] "angle.TimeDomain.BodyAccelerometerJerkMean.gravityMean"
-[84] "angle.TimeDomain.BodyGyroscopeMean.gravityMean"        
-[85] "angle.TimeDomain.BodyGyroscopeJerkMean.gravityMean"    
-[86] "angle.X.gravityMean"                                   
-[87] "angle.Y.gravityMean"                                   
-[88] "angle.Z.gravityMean"
+        Normalized angle between mean body acceleration and gravity acceleration (from accelerometer)
+            Integer values bounded within [-1, 1]
+            
+angle.TimeDomain.BodyAccelerometerJerkMean.gravityMean
+        Normalized angle between mean body jerk and mean gravity (from accelerometer)
+            Integer values bounded within [-1, 1]            
+
+angle.TimeDomain.BodyGyroscopeMean.gravity
+        Normalized angle between mean body acceleration and gravity acceleration (from gyroscope)
+            Integer values bounded within [-1, 1]
+            
+angle.TimeDomain.BodyGyroscopeJerkMean.gravityMean
+        Normalized angle between mean body jerk and mean gravity (from gyroscope)
+            Integer values bounded within [-1, 1]   
+
+angle.X.gravityMean   
+        Normalized angular velocity with mean gravity in x-plane
+            Integer values bounded within [-1, 1]  
+            
+angle.Y.gravityMean   
+        Normalized angular velocity with mean gravity in y-plane
+            Integer values bounded within [-1, 1] 
+            
+angle.Z.gravityMean   
+        Normalized angular velocity with mean gravity in z-plane
+            Integer values bounded within [-1, 1]             
 ```
