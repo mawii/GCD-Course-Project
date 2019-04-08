@@ -11,10 +11,13 @@ The files in this repository serve to merge the test and training sets, select o
 ### Getting and Cleaning the Data
 This repository contains the following files:
 1. README.md
-2. run_analysis.R
+2. TidySummarizedData.txt
 3. codebook.md
+4. run_analysis.R
 
 *run_analysis.R* reads the following from a zip file obtained [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip): a list of all features (column names), the six activity labels (WALKING, WALKING_UPSTAIRS, etc.), the training set, training labels, test set, and test labels. Then, the R script selects only variables of mean or standard deviation and changes the column names to be more verbose. Thereafter, activity labels and subject ID numbers are appended as separate columns, and the training and test sets are merged vertically. Finally, the resulting dataset is summarized as a means data.frame grouped by activities and subgrouped by subject ID.
+
+*TidySummarizedData.txt* is the summarized dataset grouped by activity label and subgrouped by subject ID.
 
 To read the summarized, tidy data into R, consider the following command (credit to [David Hood](https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-cleaning-the-assignment/)):
 
