@@ -9,24 +9,24 @@ dateDownloaded <- Sys.Date()
 i <- unzip(temp, list = T) # saves extracted file info
 fileNames <- i[, 1] # project file names
 extractDates <- i[, 2] # extract dates and times
-unzip(temp, list = T) # unzips zip folder
+unzip(temp, list = T, exdir = "./dataset") # unzips zip folder
 unlink(temp) # closes connection with temp file
 
 
 ## Read in test and train datasets, activity labels, and subject IDs
-test_set <- read.table("./UCI HAR Dataset/test/X_test.txt")
-train_set <- read.table("./UCI HAR Dataset/train/X_train.txt")
+test_set <- read.table("./dataset/UCI HAR Dataset/test/X_test.txt")
+train_set <- read.table("./dataset/UCI HAR Dataset/train/X_train.txt")
 
-activity_labels <- read.table("./UCI HAR Dataset/activity_labels.txt")[, 2]
-activities_test <- read.table("./UCI HAR Dataset/test/y_test.txt")[, 1]
-activities_train <- read.table("./UCI HAR Dataset/train/y_train.txt")[, 1]
+activity_labels <- read.table("./dataset/UCI HAR Dataset/activity_labels.txt")[, 2]
+activities_test <- read.table("./dataset/UCI HAR Dataset/test/y_test.txt")[, 1]
+activities_train <- read.table("./dataset/UCI HAR Dataset/train/y_train.txt")[, 1]
 
-subject_id_test <- read.table("./UCI HAR Dataset/test/subject_test.txt")[, 1]
-subject_id_train <- read.table("./UCI HAR Dataset/train/subject_train.txt")[, 1]
+subject_id_test <- read.table("./dataset/UCI HAR Dataset/test/subject_test.txt")[, 1]
+subject_id_train <- read.table("./dataset/UCI HAR Dataset/train/subject_train.txt")[, 1]
 
 ## Read in column names, and rename them so all invalid characters
 ## are translated to "."
-bad_names <- read.table("/UCI HAR Dataset/features.txt")[, 2]
+bad_names <- read.table("./dataset/UCI HAR Dataset/features.txt")[, 2]
 good_names <- make.names(bad_names, unique = T, allow_ = T) %>%
 			gsub("\\.+$", "", .) %>% gsub("[\\.]+", "\\.", .)
 names(test_set) <- good_names; names(train_set) <- good_names
